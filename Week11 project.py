@@ -14,8 +14,10 @@ def dialog():
 def dialogTest():
     value = askstring("메모장", "메모 입력")
     Dialog1.configure(text = str(value), font="바탕체")
-def open():
+def openNotion():
     webbrowser.open("https://namnambiz.notion.site/Week11-c2843dba0f454790a4fd07194430f011")
+def openGit():
+    webbrowser.open("https://github.com/iNS4L1027/Python_Week11")
 def exit():
     window.quit()
     window.destroy()
@@ -50,7 +52,8 @@ window.config(menu=mainMenu)
 
 fileMenu = Menu(mainMenu)
 mainMenu.add_cascade(label="Menu", menu=fileMenu)
-fileMenu.add_command(label="go to Notion", command=open)
+fileMenu.add_command(label="go to Notion", command=openNotion)
+fileMenu.add_command(label="go to Github", command=openGit)
 
 fileMenu.add_separator()
 fileMenu.add_command(label="Exit", command=exit)
@@ -59,7 +62,7 @@ fileMenu.add_command(label="Exit", command=exit)
 button1 = Button(window, text="\'Pack()\'의 기능 설명", bg="#424242", font="맑은고딕", fg="White", command=pack)
 button2 = Button(window, text="\'Place()\'의 기능 설명", bg="#424242", font="맑은고딕", fg="White",command=place)
 button3 = Button(window, text="\'Dialog\'의 기능 설명", bg="#424242", font="맑은고딕", fg="White",command=dialog)
-button4 = Button(window, text="\'Dialog\'의 기능 예제", bg="#424242", font="맑은고딕", fg="White",command=dialogTest)
+button4 = Button(window, text="메모장", bg="#424242", font="맑은고딕", fg="White",command=dialogTest)
 
 
 #이미지
